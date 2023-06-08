@@ -21,7 +21,6 @@ public class App {
 		System.out.println("Printing data ...");
 		printUserData();
 		printBookmarkData();
-		System.out.println("-".repeat(166));
 	}
 
 	private static void printUserData() {
@@ -33,7 +32,7 @@ public class App {
 
 	private static void printBookmarkData() {
 		for (Bookmark[] bookmarksList : bookmarks) {
-			System.out.println("-".repeat(166));
+			System.out.println();
 			for (Bookmark bookmark : bookmarksList) {
 				System.out.println(bookmark);
 			}
@@ -41,8 +40,9 @@ public class App {
 	}
 
 	private static void startBookmarking() {
-		System.out.println("-".repeat(166));
+		System.out.println("-".repeat(26));
 		System.out.println("2. Bookmarking ...");
+		System.out.println("-".repeat(166));
 		for (User user : users) {
 			View.bookmark(user, bookmarks);
 		}
