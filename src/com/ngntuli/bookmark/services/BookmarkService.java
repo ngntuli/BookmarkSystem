@@ -4,6 +4,8 @@ import com.ngntuli.bookmark.dao.BookmarkDao;
 import com.ngntuli.bookmark.entities.Book;
 import com.ngntuli.bookmark.entities.Bookmark;
 import com.ngntuli.bookmark.entities.Movie;
+import com.ngntuli.bookmark.entities.User;
+import com.ngntuli.bookmark.entities.UserBookmark;
 import com.ngntuli.bookmark.entities.WebLink;
 
 public class BookmarkService {
@@ -58,5 +60,14 @@ public class BookmarkService {
 
 	public Bookmark[][] getBookmarks() {
 		return dao.getBookmarks();
+	}
+
+	public void saveUserBoomark(User user, Bookmark bookmark) {
+		UserBookmark userBookmark = new UserBookmark();
+		userBookmark.setUser(user);
+		userBookmark.setBookmark(bookmark);
+
+		dao.saveUserBookmark(userBookmark);
+
 	}
 }
