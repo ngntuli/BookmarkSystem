@@ -1,6 +1,7 @@
 package com.ngntuli.bookmark;
 
 import com.ngntuli.bookmark.constants.BookGenre;
+import com.ngntuli.bookmark.constants.BookmarkData;
 import com.ngntuli.bookmark.constants.Gender;
 import com.ngntuli.bookmark.constants.MovieGenre;
 import com.ngntuli.bookmark.constants.UserType;
@@ -11,24 +12,22 @@ import com.ngntuli.bookmark.services.BookmarkService;
 import com.ngntuli.bookmark.services.UserService;
 
 public class DataStore {
-	private static final int USER_BOOKMARK_LIMIT = 5;
-	private static final int BOOKMARK_COUNT_PER_TYPE = 5;
-	private static final int BOOMARK_TYPES_COUNT = 3;
-	private static final int TOTAL_USER_COUNT = 5;
 
-	private static User[] users = new User[TOTAL_USER_COUNT];
+	private static User[] users = new User[BookmarkData.TOTAL_USER_COUNT];
 
 	public static User[] getUsers() {
 		return users;
 	}
 
-	private static Bookmark[][] bookmarks = new Bookmark[BOOMARK_TYPES_COUNT][BOOKMARK_COUNT_PER_TYPE];
+	private static Bookmark[][] bookmarks = new Bookmark[BookmarkData.BOOMARK_TYPES_COUNT][BookmarkData.BOOKMARK_COUNT_PER_TYPE];
 
 	public static Bookmark[][] getBookmarks() {
 		return bookmarks;
 	}
 
-	private static UserBookmark[] userBookmarks = new UserBookmark[TOTAL_USER_COUNT * USER_BOOKMARK_LIMIT];
+	private static UserBookmark[] userBookmarks = new UserBookmark[BookmarkData.TOTAL_USER_COUNT
+			* BookmarkData.USER_BOOKMARK_LIMIT];
+	private static int bookmarkIndex;
 
 	public static void loadData() {
 		loadUsers();
@@ -95,5 +94,11 @@ public class DataStore {
 				BookGenre.TECHNICAL, 4.5);
 		bookmarks[2][4] = BookmarkService.getInstance().createBook(4004, "Effective Java Programming Language Guide",
 				2007, "Prentice Hall", new String[] { "Joshua Bloch" }, BookGenre.TECHNICAL, 4.9);
+	}
+
+	public static void add(UserBookmark userBookmark) {
+		userBookmarks[bookmarkIndex] = userBookmark;
+		bookmarkIndex++;
+
 	}
 }
