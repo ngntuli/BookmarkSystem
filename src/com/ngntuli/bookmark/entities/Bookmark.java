@@ -29,4 +29,5 @@ public abstract class Bookmark {
 		this.profileUrl = profileUrl;
 	}
 
+	public abstract boolean isKidFriendlyEligible();
 }
