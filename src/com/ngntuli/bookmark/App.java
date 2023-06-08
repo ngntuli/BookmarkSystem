@@ -20,13 +20,13 @@ public class App {
 
 		
 		System.out.println("2. Printing data ...");
-		System.out.println("-".repeat(166));
 		printUserData();
 		printBookmarkData();
 		System.out.println("-".repeat(166));
 	}
 
 	private static void printUserData() {
+		System.out.println("-".repeat(166));
 		for (User user : users) {
 			System.out.println(user);
 		}
@@ -34,6 +34,7 @@ public class App {
 
 	private static void printBookmarkData() {
 		for (Bookmark[] bookmarksList : bookmarks) {
+			System.out.println("-".repeat(166));
 			for (Bookmark bookmark : bookmarksList) {
 				System.out.println(bookmark);
 			}
