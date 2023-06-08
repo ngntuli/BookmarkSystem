@@ -55,4 +55,9 @@ public class Movie extends Bookmark {
 				+ Arrays.toString(directors) + ", genre=" + genre + ", imdbRating=" + imdbRating + "]";
 	}
 
+	@Override
+	public boolean isKidFriendlyEligible() {
+		return true;
+	}
+
 }
