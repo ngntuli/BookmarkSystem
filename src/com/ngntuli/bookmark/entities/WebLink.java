@@ -24,4 +24,9 @@ public class WebLink extends Bookmark {
 	public String toString() {
 		return "WebLink [url=" + url + ", host=" + host + "]";
 	}
+
+	@Override
+	public boolean isKidFriendlyEligible() {
+		return true;
+	}
 }
