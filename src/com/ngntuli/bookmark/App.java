@@ -41,6 +41,7 @@ public class App {
 	}
 
 	private static void startBookmarking() {
+		System.out.println("-".repeat(166));
 		System.out.println("2. Bookmarking ...");
 		for (User user : users) {
 			View.bookmark(user, bookmarks);
