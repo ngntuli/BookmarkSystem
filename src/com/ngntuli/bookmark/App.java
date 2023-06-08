@@ -18,8 +18,7 @@ public class App {
 		users = UserService.getInstance().getUsers();
 		bookmarks = BookmarkService.getInstance().getBookmarks();
 
-		
-		System.out.println("2. Printing data ...");
+		System.out.println("Printing data ...");
 		printUserData();
 		printBookmarkData();
 		System.out.println("-".repeat(166));
@@ -41,8 +40,17 @@ public class App {
 		}
 	}
 
+	private static void startBookmarking() {
+		System.out.println("2. Bookmarking ...");
+		for (User user : users) {
+			View.bookmark(user, bookmarks);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		loadData();
+		startBookmarking();
 	}
 
 }
