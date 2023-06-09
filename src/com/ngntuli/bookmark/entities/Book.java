@@ -2,6 +2,8 @@ package com.ngntuli.bookmark.entities;
 
 import java.util.Arrays;
 
+import com.ngntuli.bookmark.constants.BookGenre;
+
 public class Book extends Bookmark {
 	private int publicationYear;
 	private String publisher;
@@ -57,6 +59,9 @@ public class Book extends Bookmark {
 
 	@Override
 	public boolean isKidFriendlyEligible() {
+		if (genre.equals(BookGenre.PHILOSOPHY) || genre.equals(BookGenre.SELF_HELP)) {
+			return false;
+		}
 		return true;
 	}
 }
