@@ -18,9 +18,9 @@ public class App {
 		users = UserService.getInstance().getUsers();
 		bookmarks = BookmarkService.getInstance().getBookmarks();
 
-		System.out.println("Printing data ...");
-		printUserData();
-		printBookmarkData();
+		// System.out.println("Printing data ...");
+		// printUserData();
+		// printBookmarkData();
 	}
 
 	private static void printUserData() {
@@ -39,19 +39,19 @@ public class App {
 		}
 	}
 
-	private static void startBookmarking() {
-		System.out.println("-".repeat(26));
-		System.out.println("2. Bookmarking ...");
-		System.out.println("-".repeat(166));
+	private static void startBrowsing() {
+		// System.out.println("-".repeat(26));
+		// System.out.println("2. Bookmarking ...");
+		// System.out.println("-".repeat(166));
 		for (User user : users) {
-			View.bookmark(user, bookmarks);
+			View.browse(user, bookmarks);
 		}
 
 	}
 
 	public static void main(String[] args) {
 		loadData();
-		startBookmarking();
+		startBrowsing();
 	}
 
 }
