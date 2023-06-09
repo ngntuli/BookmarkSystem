@@ -14,7 +14,7 @@ public class View {
 
 		for (Bookmark[] bookmarksList : bookmarks) {
 			for (Bookmark bookmark : bookmarksList) {
-				// Bookmarking!!
+				// Book marking!!
 				if (bookmarkCount < BookmarkData.USER_BOOKMARK_LIMIT) {
 					boolean isBookmarked = getBookmarkDecision(bookmark);
 					if (isBookmarked) {
@@ -37,7 +37,7 @@ public class View {
 					}
 				}
 			}
-			
+
 		}
 		System.out.println();
 
