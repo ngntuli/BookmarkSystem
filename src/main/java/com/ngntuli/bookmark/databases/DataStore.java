@@ -1,4 +1,4 @@
-package com.ngntuli.bookmark.config;
+package com.ngntuli.bookmark.databases;
 
 import com.ngntuli.bookmark.models.Bookmark;
 import com.ngntuli.bookmark.models.User;

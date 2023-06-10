@@ -1,6 +1,6 @@
 package com.ngntuli.bookmark;
 
-import com.ngntuli.bookmark.config.DataStore;
+import com.ngntuli.bookmark.databases.DataStore;
 import com.ngntuli.bookmark.models.Bookmark;
 import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.services.BookmarkService;
