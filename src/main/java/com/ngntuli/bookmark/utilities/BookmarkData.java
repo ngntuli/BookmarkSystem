@@ -1,4 +1,4 @@
-package com.ngntuli.bookmark.constants;
+package com.ngntuli.bookmark.utilities;
 
 public class BookmarkData {
 	private BookmarkData() {

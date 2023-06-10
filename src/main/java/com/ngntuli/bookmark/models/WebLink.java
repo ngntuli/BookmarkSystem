@@ -1,4 +1,4 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 public class WebLink extends Bookmark {
 	private String url;

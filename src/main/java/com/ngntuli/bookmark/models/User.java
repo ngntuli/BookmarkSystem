@@ -1,4 +1,4 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 public class User {
 	private long id;

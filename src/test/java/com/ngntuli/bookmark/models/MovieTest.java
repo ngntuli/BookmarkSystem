@@ -1,11 +1,12 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.ngntuli.bookmark.constants.MovieGenre;
+import com.ngntuli.bookmark.models.Movie;
 import com.ngntuli.bookmark.services.BookmarkService;
+import com.ngntuli.bookmark.utilities.MovieGenre;
 
 class MovieTest {
 

@@ -1,9 +1,10 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.ngntuli.bookmark.models.WebLink;
 import com.ngntuli.bookmark.services.BookmarkService;
 
 class WebLinkTest {

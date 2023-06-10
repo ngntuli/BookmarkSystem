@@ -1,8 +1,8 @@
-package com.ngntuli.bookmark.dao;
+package com.ngntuli.bookmark.daos;
 
-import com.ngntuli.bookmark.DataStore;
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.UserBookmark;
+import com.ngntuli.bookmark.config.DataStore;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.UserBookmark;
 
 public class BookmarkDao {
 	public Bookmark[][] getBookmarks() {

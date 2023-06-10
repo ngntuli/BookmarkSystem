@@ -1,9 +1,11 @@
 package com.ngntuli.bookmark;
 
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.User;
+import com.ngntuli.bookmark.config.DataStore;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.services.BookmarkService;
 import com.ngntuli.bookmark.services.UserService;
+import com.ngntuli.bookmark.views.View;
 
 public class App {
 	private static User[] users;

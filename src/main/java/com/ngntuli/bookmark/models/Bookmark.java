@@ -1,6 +1,6 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
-import com.ngntuli.bookmark.constants.KidFriendlyStatus;
+import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
 
 public abstract class Bookmark {
 	private long id;

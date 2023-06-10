@@ -1,8 +1,8 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 import java.util.Arrays;
 
-import com.ngntuli.bookmark.constants.MovieGenre;
+import com.ngntuli.bookmark.utilities.MovieGenre;
 
 public class Movie extends Bookmark {
 	private int releaseYear;

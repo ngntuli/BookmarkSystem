@@ -1,15 +1,15 @@
-package com.ngntuli.bookmark;
+package com.ngntuli.bookmark.config;
 
-import com.ngntuli.bookmark.constants.BookGenre;
-import com.ngntuli.bookmark.constants.BookmarkData;
-import com.ngntuli.bookmark.constants.Gender;
-import com.ngntuli.bookmark.constants.MovieGenre;
-import com.ngntuli.bookmark.constants.UserType;
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.User;
-import com.ngntuli.bookmark.entities.UserBookmark;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.User;
+import com.ngntuli.bookmark.models.UserBookmark;
 import com.ngntuli.bookmark.services.BookmarkService;
 import com.ngntuli.bookmark.services.UserService;
+import com.ngntuli.bookmark.utilities.BookGenre;
+import com.ngntuli.bookmark.utilities.BookmarkData;
+import com.ngntuli.bookmark.utilities.Gender;
+import com.ngntuli.bookmark.utilities.MovieGenre;
+import com.ngntuli.bookmark.utilities.UserType;
 
 public class DataStore {
 

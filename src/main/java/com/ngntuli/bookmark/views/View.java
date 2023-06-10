@@ -1,11 +1,11 @@
-package com.ngntuli.bookmark;
+package com.ngntuli.bookmark.views;
 
-import com.ngntuli.bookmark.constants.BookmarkData;
-import com.ngntuli.bookmark.constants.KidFriendlyStatus;
-import com.ngntuli.bookmark.constants.UserType;
 import com.ngntuli.bookmark.controllers.BookmarkController;
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.User;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.User;
+import com.ngntuli.bookmark.utilities.BookmarkData;
+import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
+import com.ngntuli.bookmark.utilities.UserType;
 
 public class View {
 	public static void browse(User user, Bookmark[][] bookmarks) {

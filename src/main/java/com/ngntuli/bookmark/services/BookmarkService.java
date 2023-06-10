@@ -1,12 +1,12 @@
 package com.ngntuli.bookmark.services;
 
-import com.ngntuli.bookmark.dao.BookmarkDao;
-import com.ngntuli.bookmark.entities.Book;
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.Movie;
-import com.ngntuli.bookmark.entities.User;
-import com.ngntuli.bookmark.entities.UserBookmark;
-import com.ngntuli.bookmark.entities.WebLink;
+import com.ngntuli.bookmark.daos.BookmarkDao;
+import com.ngntuli.bookmark.models.Book;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.Movie;
+import com.ngntuli.bookmark.models.User;
+import com.ngntuli.bookmark.models.UserBookmark;
+import com.ngntuli.bookmark.models.WebLink;
 
 public class BookmarkService {
 	private static BookmarkService instance = new BookmarkService();

@@ -1,7 +1,7 @@
 package com.ngntuli.bookmark.controllers;
 
-import com.ngntuli.bookmark.entities.Bookmark;
-import com.ngntuli.bookmark.entities.User;
+import com.ngntuli.bookmark.models.Bookmark;
+import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.services.BookmarkService;
 
 public class BookmarkController {

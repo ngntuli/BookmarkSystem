@@ -1,8 +1,8 @@
-package com.ngntuli.bookmark.entities;
+package com.ngntuli.bookmark.models;
 
 import java.util.Arrays;
 
-import com.ngntuli.bookmark.constants.BookGenre;
+import com.ngntuli.bookmark.utilities.BookGenre;
 
 public class Book extends Bookmark {
 	private int publicationYear;

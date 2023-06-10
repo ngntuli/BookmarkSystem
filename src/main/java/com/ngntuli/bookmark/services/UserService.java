@@ -1,7 +1,7 @@
 package com.ngntuli.bookmark.services;
 
-import com.ngntuli.bookmark.dao.UserDao;
-import com.ngntuli.bookmark.entities.User;
+import com.ngntuli.bookmark.daos.UserDao;
+import com.ngntuli.bookmark.models.User;
 
 public class UserService {
 	private static UserService instance = new UserService();
