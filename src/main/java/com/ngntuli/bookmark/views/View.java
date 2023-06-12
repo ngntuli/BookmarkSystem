@@ -3,6 +3,7 @@ package com.ngntuli.bookmark.views;
 import com.ngntuli.bookmark.controllers.BookmarkController;
 import com.ngntuli.bookmark.models.Bookmark;
 import com.ngntuli.bookmark.models.User;
+import com.ngntuli.bookmark.services.Shareable;
 import com.ngntuli.bookmark.utilities.BookmarkData;
 import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
 import com.ngntuli.bookmark.utilities.UserType;
@@ -37,12 +38,26 @@ public class View {
 
 						}
 					}
+
+					// Sharing!!!
+					if (bookmark.getKidFriendlyStatus().equals(KidFriendlyStatus.APPROVED)
+							&& bookmark instanceof Shareable) {
+						boolean isShared = getShareDecision();
+						if (isShared) {
+							BookmarkController.getInstance().share(user, bookmark);
+						}
+					}
 				}
 			}
 
 		}
 		System.out.println();
 
+	}
+
+	// TODO: Below methods simulate user input. After IO, we take input via console.
+	private static boolean getShareDecision() {
+		return Math.random() < 0.5 ? true : false;
 	}
 
 	private static String getKidFriendlyStatusDecision() {
