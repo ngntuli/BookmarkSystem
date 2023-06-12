@@ -25,14 +25,16 @@ public class View {
 						System.out.println("New Item Bookmarked ..." + bookmark);
 					}
 				}
-				// Mark as kid-friendly
+
 				if (user.getUserType().equals(UserType.EDITOR) || user.getUserType().equals(UserType.CHIEF_EDITOR)) {
+
+					// Mark as kid-friendly
 					if (bookmark.isKidFriendlyEligible()
 							&& bookmark.getKidFriendlyStatus().equals(KidFriendlyStatus.UNKNOWN)) {
 						String kidFriendlyStatus = getKidFriendlyStatusDecision();
 						if (!kidFriendlyStatus.equals(KidFriendlyStatus.UNKNOWN)) {
-							bookmark.setKidFriendlyStatus(kidFriendlyStatus);
-							System.out.println("Kid-friendly status: " + kidFriendlyStatus + ", " + bookmark);
+							BookmarkController.getInstance().setKidFriendlyStatus(kidFriendlyStatus, bookmark);
+
 						}
 					}
 				}
