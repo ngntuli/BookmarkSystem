@@ -70,4 +70,9 @@ public class BookmarkService {
 		dao.saveUserBookmark(userBookmark);
 
 	}
+
+	public void setKidFriendlyStatus(String kidFriendlyStatus, Bookmark bookmark) {
+		bookmark.setKidFriendlyStatus(kidFriendlyStatus);
+		System.out.println("Kid-friendly status: " + kidFriendlyStatus + ", " + bookmark);
+	}
 }
