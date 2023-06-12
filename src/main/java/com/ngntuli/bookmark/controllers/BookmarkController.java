@@ -19,4 +19,9 @@ public class BookmarkController {
 
 	}
 
+	public void setKidFriendlyStatus(String kidFriendlyStatus, Bookmark bookmark) {
+		BookmarkService.getInstance().setKidFriendlyStatus(kidFriendlyStatus, bookmark);
+
+	}
+
 }
