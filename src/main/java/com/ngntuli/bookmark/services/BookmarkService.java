@@ -71,8 +71,10 @@ public class BookmarkService {
 
 	}
 
-	public void setKidFriendlyStatus(String kidFriendlyStatus, Bookmark bookmark) {
+	public void setKidFriendlyStatus(User user, String kidFriendlyStatus, Bookmark bookmark) {
 		bookmark.setKidFriendlyStatus(kidFriendlyStatus);
-		System.out.println("Kid-friendly status: " + kidFriendlyStatus + ", " + bookmark);
+		bookmark.setKidFriendlyMarkedBy(user);
+		System.out.println(
+				"Kid-friendly status: " + kidFriendlyStatus + ", Marked by: " + user.getEmail() + ", " + bookmark);
 	}
 }
