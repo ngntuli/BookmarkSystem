@@ -24,4 +24,8 @@ public class BookmarkController {
 
 	}
 
+	public void share(User user, Bookmark bookmark) {
+		BookmarkService.getInstance().share(user, bookmark);
+	}
+
 }
