@@ -58,29 +58,7 @@ public class DataStore {
 	}
 
 	private static void loadWebLinks() {
-		/*
-		 * bookmarks[0][0] = BookmarkService.getInstance().createWebLink(2000,
-		 * "Taming Tiger, Part 2",
-		 * "http://www.javaworld.com/article/2072759/core-java/taming-tiger--part-2.html",
-		 * "http://www.javaworld.com"); bookmarks[0][1] =
-		 * BookmarkService.getInstance().createWebLink(2001,
-		 * "How do I import a pre-existing Java project into Eclipse and get up and running?"
-		 * ,
-		 * "http://stackoverflow.com/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running",
-		 * "http://www.stackoverflow.com"); bookmarks[0][2] =
-		 * BookmarkService.getInstance().createWebLink(2002,
-		 * "Interface vs Abstract Class",
-		 * "http://mindprod.com/jgloss/interfacevsabstract.html",
-		 * "http://mindprod.com"); bookmarks[0][3] =
-		 * BookmarkService.getInstance().createWebLink(2003,
-		 * "NIO tutorial by Greg Travis",
-		 * "http://cs.brown.edu/courses/cs161/papers/j-nio-ltr.pdf",
-		 * "http://cs.brown.edu"); bookmarks[0][4] =
-		 * BookmarkService.getInstance().createWebLink(2004,
-		 * "Virtual Hosting and Tomcat",
-		 * "http://tomcat.apache.org/tomcat-6.0-doc/virtual-hosting-howto.html",
-		 * "http://tomcat.apache.org");
-		 */
+
 		String[] data = new String[BookmarkData.BOOKMARK_COUNT_PER_TYPE];
 		IOUtil.read(data, "WebLink");
 		int colNum = 0;
