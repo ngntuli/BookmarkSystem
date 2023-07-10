@@ -70,23 +70,6 @@ public class DataStore {
 	}
 
 	private static void loadMovies() {
-		/*
-		 * bookmarks[1][0] = BookmarkService.getInstance().createMovie(3000,
-		 * "Citizen Kane", "", 1941, new String[] { "Orson Welles", "Joseph Cotten" },
-		 * new String[] { "Orson Welles" }, MovieGenre.CLASSICS, 8.5); bookmarks[1][1] =
-		 * BookmarkService.getInstance().createMovie(3001, "The Grapes of Wrath", "",
-		 * 1940, new String[] { "Henry Fonda", "Jane Darwell" }, new String[] {
-		 * "John Ford" }, MovieGenre.CLASSICS, 8.2); bookmarks[1][2] =
-		 * BookmarkService.getInstance().createMovie(3002, "A Touch of Greatness", "",
-		 * 2004, new String[] { "Albert Cullum" }, new String[] { "Leslie Sullivan" },
-		 * MovieGenre.DOCUMENTARIES, 7.3); bookmarks[1][3] =
-		 * BookmarkService.getInstance().createMovie(3003, "The Big Bang Theory", "",
-		 * 2007, new String[] { "Kaley Cuoco", "Jim Parsons" }, new String[] {
-		 * "Chuck Lorre", "Bill Prady" }, MovieGenre.TV_SHOWS, 8.7); bookmarks[1][4] =
-		 * BookmarkService.getInstance().createMovie(3004, "Ikiru", "", 1952, new
-		 * String[] { "Takashi Shimura", "Minoru Chiaki" }, new String[] {
-		 * "Akira Kurosawa" }, MovieGenre.FOREIGN_MOVIES, 8.4);
-		 */
 
 		String[] data = new String[BookmarkData.BOOKMARK_COUNT_PER_TYPE];
 		IOUtil.read(data, "Movie");
