@@ -38,18 +38,7 @@ public class DataStore {
 	}
 
 	private static void loadUsers() {
-		/*
-		 * users[0] = UserService.getInstance().createUser(1000, "user0@ngntuli.com",
-		 * "test", "Brandon", "M", Gender.MALE, UserType.USER); users[1] =
-		 * UserService.getInstance().createUser(1001, "user1@ngntuli.com", "test",
-		 * "Lucky", "M", Gender.TRANSGENDER, UserType.USER); users[2] =
-		 * UserService.getInstance().createUser(1002, "user2@ngntuli.com", "test",
-		 * "Given", "M", Gender.MALE, UserType.EDITOR); users[3] =
-		 * UserService.getInstance().createUser(1003, "user3@ngntuli.com", "test",
-		 * "Charlotte", "M", Gender.FEMALE, UserType.EDITOR); users[4] =
-		 * UserService.getInstance().createUser(1004, "user4@ngntuli.com", "test",
-		 * "Nkosinathi", "M", Gender.MALE, UserType.CHIEF_EDITOR);
-		 */
+
 		String[] data = new String[BookmarkData.TOTAL_USER_COUNT];
 		IOUtil.read(data, "User");
 		int rowNum = 0;
