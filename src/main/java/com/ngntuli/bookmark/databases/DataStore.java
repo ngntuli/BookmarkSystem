@@ -43,7 +43,7 @@ public class DataStore {
 		IOUtil.read(data, "User");
 		int rowNum = 0;
 		for (String row : data) {
-			String[] values = row.split("\t");
+			String[] values = row.split(";");
 
 			int gender = Gender.MALE;
 			if (values[5].equals("f")) {
@@ -63,7 +63,7 @@ public class DataStore {
 		IOUtil.read(data, "WebLink");
 		int colNum = 0;
 		for (String row : data) {
-			String[] values = row.split("\t");
+			String[] values = row.split(";");
 			bookmarks[0][colNum++] = BookmarkService.getInstance().createWebLink(Long.parseLong(values[0]), values[1],
 					values[2], values[3]/* , values[4] */);
 		}
@@ -75,7 +75,7 @@ public class DataStore {
 		IOUtil.read(data, "Movie");
 		int colNum = 0;
 		for (String row : data) {
-			String[] values = row.split("\t");
+			String[] values = row.split(";");
 			String[] cast = values[3].split(",");
 			String[] directors = values[4].split(",");
 			bookmarks[1][colNum++] = BookmarkService.getInstance().createMovie(Long.parseLong(values[0]), values[1], "",
@@ -90,7 +90,7 @@ public class DataStore {
 		IOUtil.read(data, "Book");
 		int colNum = 0;
 		for (String row : data) {
-			String[] values = row.split("\t");
+			String[] values = row.split(";");
 			String[] authors = values[4].split(",");
 			bookmarks[2][colNum++] = BookmarkService.getInstance().createBook(Long.parseLong(values[0]), values[1],
 					Integer.parseInt(values[2]), values[3], authors, values[5],
