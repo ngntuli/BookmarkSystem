@@ -1,5 +1,8 @@
 package com.ngntuli.bookmark.services;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
 import com.ngntuli.bookmark.daos.BookmarkDao;
 import com.ngntuli.bookmark.models.Book;
 import com.ngntuli.bookmark.models.Bookmark;
@@ -7,6 +10,8 @@ import com.ngntuli.bookmark.models.Movie;
 import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.models.UserBookmark;
 import com.ngntuli.bookmark.models.WebLink;
+import com.ngntuli.bookmark.utilities.HttpConnect;
+import com.ngntuli.bookmark.utilities.IOUtil;
 
 public class BookmarkService {
 	private static BookmarkService instance = new BookmarkService();
@@ -67,6 +72,22 @@ public class BookmarkService {
 		userBookmark.setUser(user);
 		userBookmark.setBookmark(bookmark);
 
+		if (bookmark instanceof WebLink) {
+			try {
+				String url = ((WebLink) bookmark).getUrl();
+				if (!url.endsWith(".pdf")) {
+					String webpage = HttpConnect.download(((WebLink) bookmark).getUrl());
+					if (webpage != null) {
+						IOUtil.write(webpage, bookmark.getId());
+					}
+				}
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			} catch (URISyntaxException e) {
+				e.printStackTrace();
+			}
+		}
+
 		dao.saveUserBookmark(userBookmark);
 
 	}
@@ -74,6 +95,7 @@ public class BookmarkService {
 	public void setKidFriendlyStatus(User user, String kidFriendlyStatus, Bookmark bookmark) {
 		bookmark.setKidFriendlyStatus(kidFriendlyStatus);
 		bookmark.setKidFriendlyMarkedBy(user);
+
 		System.out.println(
 				"Kid-friendly status: " + kidFriendlyStatus + ", Marked by: " + user.getEmail() + ", " + bookmark);
 	}
