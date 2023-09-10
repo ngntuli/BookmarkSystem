@@ -79,7 +79,7 @@ public class DataStore {
 			String[] cast = values[3].split(",");
 			String[] directors = values[4].split(",");
 			bookmarks[1][colNum++] = BookmarkService.getInstance().createMovie(Long.parseLong(values[0]), values[1], "",
-					Integer.parseInt(values[2]), cast, directors, values[5],
+					Integer.parseInt(values[2]), cast, directors, MovieGenre.valueOf(values[5]),
 					Double.parseDouble(values[6])/* , values[7] */);
 		}
 	}
