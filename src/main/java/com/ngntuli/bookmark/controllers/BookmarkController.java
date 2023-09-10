@@ -3,6 +3,7 @@ package com.ngntuli.bookmark.controllers;
 import com.ngntuli.bookmark.models.Bookmark;
 import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.services.BookmarkService;
+import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
 
 public class BookmarkController {
 	private static BookmarkController instance = new BookmarkController();
@@ -19,7 +20,7 @@ public class BookmarkController {
 
 	}
 
-	public void setKidFriendlyStatus(User user, String kidFriendlyStatus, Bookmark bookmark) {
+	public void setKidFriendlyStatus(User user, KidFriendlyStatus kidFriendlyStatus, Bookmark bookmark) {
 		BookmarkService.getInstance().setKidFriendlyStatus(user, kidFriendlyStatus, bookmark);
 
 	}
