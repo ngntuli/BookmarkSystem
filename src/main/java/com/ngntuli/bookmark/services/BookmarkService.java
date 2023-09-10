@@ -14,6 +14,7 @@ import com.ngntuli.bookmark.utilities.BookGenre;
 import com.ngntuli.bookmark.utilities.HttpConnect;
 import com.ngntuli.bookmark.utilities.IOUtil;
 import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
+import com.ngntuli.bookmark.utilities.MovieGenre;
 
 public class BookmarkService {
 	private static BookmarkService instance = new BookmarkService();
@@ -41,7 +42,7 @@ public class BookmarkService {
 	}
 
 	public Movie createMovie(long id, String title, String profileUrl, int releaseYear, String[] cast,
-			String[] directors, String genre, double imdbRating) {
+			String[] directors, MovieGenre genre, double imdbRating) {
 		Movie movie = new Movie();
 		movie.setId(id);
 		movie.setTitle(title);
