@@ -2,6 +2,7 @@ package com.ngntuli.bookmark.services;
 
 import com.ngntuli.bookmark.daos.UserDao;
 import com.ngntuli.bookmark.models.User;
+import com.ngntuli.bookmark.utilities.Gender;
 
 public class UserService {
 	private static UserService instance = new UserService();
@@ -14,7 +15,7 @@ public class UserService {
 		return instance;
 	}
 
-	public User createUser(long id, String email, String password, String firstName, String lastName, int gender,
+	public User createUser(long id, String email, String password, String firstName, String lastName, Gender gender,
 			String userType) {
 		User user = new User();
 		user.setId(id);
