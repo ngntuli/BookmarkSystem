@@ -1,11 +1,16 @@
 package com.ngntuli.bookmark.utilities;
 
-public class KidFriendlyStatus {
+public enum KidFriendlyStatus {
 
-	private KidFriendlyStatus() {
+	APPROVED("approved"), REJECTED("rejected"), UNKNOWN("unknown");
+
+	private String status;
+
+	private KidFriendlyStatus(String status) {
+		this.status = status;
 	}
 
-	public static final String APPROVED = "approved";
-	public static final String REJECTED = "rejected";
-	public static final String UNKNOWN = "unknown";
+	public String getStatus() {
+		return status;
+	}
 }
