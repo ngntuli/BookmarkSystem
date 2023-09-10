@@ -45,7 +45,7 @@ public class DataStore {
 		for (String row : data) {
 			String[] values = row.split(";");
 
-			int gender = Gender.MALE;
+			Gender gender = Gender.MALE;
 			if (values[5].equals("f")) {
 				gender = Gender.FEMALE;
 			} else if (values[5].equals("t")) {
