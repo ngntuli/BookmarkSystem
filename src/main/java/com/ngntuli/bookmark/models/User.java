@@ -1,12 +1,14 @@
 package com.ngntuli.bookmark.models;
 
+import com.ngntuli.bookmark.utilities.Gender;
+
 public class User {
 	private long id;
 	private String email;
 	private String password;
 	private String firstName;
 	private String lastName;
-	private int gender;
+	private Gender gender;
 	private String userType;
 
 	public long getId() {
@@ -29,7 +31,7 @@ public class User {
 		return lastName;
 	}
 
-	public int getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
@@ -57,7 +59,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public void setGender(int gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
