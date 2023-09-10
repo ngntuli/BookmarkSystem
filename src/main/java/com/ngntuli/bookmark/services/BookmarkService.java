@@ -13,6 +13,7 @@ import com.ngntuli.bookmark.models.WebLink;
 import com.ngntuli.bookmark.utilities.BookGenre;
 import com.ngntuli.bookmark.utilities.HttpConnect;
 import com.ngntuli.bookmark.utilities.IOUtil;
+import com.ngntuli.bookmark.utilities.KidFriendlyStatus;
 
 public class BookmarkService {
 	private static BookmarkService instance = new BookmarkService();
@@ -25,8 +26,8 @@ public class BookmarkService {
 		return instance;
 	}
 
-	public Book createBook(long id, String title, int publicationYear, String publisher, String[] authors, BookGenre genre,
-			double amozonRating) {
+	public Book createBook(long id, String title, int publicationYear, String publisher, String[] authors,
+			BookGenre genre, double amozonRating) {
 		Book book = new Book();
 		book.setId(id);
 		book.setTitle(title);
@@ -93,7 +94,7 @@ public class BookmarkService {
 
 	}
 
-	public void setKidFriendlyStatus(User user, String kidFriendlyStatus, Bookmark bookmark) {
+	public void setKidFriendlyStatus(User user, KidFriendlyStatus kidFriendlyStatus, Bookmark bookmark) {
 		bookmark.setKidFriendlyStatus(kidFriendlyStatus);
 		bookmark.setKidFriendlyMarkedBy(user);
 
