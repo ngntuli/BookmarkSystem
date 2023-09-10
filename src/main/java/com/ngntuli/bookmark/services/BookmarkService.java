@@ -10,6 +10,7 @@ import com.ngntuli.bookmark.models.Movie;
 import com.ngntuli.bookmark.models.User;
 import com.ngntuli.bookmark.models.UserBookmark;
 import com.ngntuli.bookmark.models.WebLink;
+import com.ngntuli.bookmark.utilities.BookGenre;
 import com.ngntuli.bookmark.utilities.HttpConnect;
 import com.ngntuli.bookmark.utilities.IOUtil;
 
@@ -24,7 +25,7 @@ public class BookmarkService {
 		return instance;
 	}
 
-	public Book createBook(long id, String title, int publicationYear, String publisher, String[] authors, String genre,
+	public Book createBook(long id, String title, int publicationYear, String publisher, String[] authors, BookGenre genre,
 			double amozonRating) {
 		Book book = new Book();
 		book.setId(id);
