@@ -93,7 +93,7 @@ public class DataStore {
 			String[] values = row.split(";");
 			String[] authors = values[4].split(",");
 			bookmarks[2][colNum++] = BookmarkService.getInstance().createBook(Long.parseLong(values[0]), values[1],
-					Integer.parseInt(values[2]), values[3], authors, values[5],
+					Integer.parseInt(values[2]), values[3], authors, BookGenre.valueOf(values[5]),
 					Double.parseDouble(values[6])/* , values[7] */);
 		}
 	}
