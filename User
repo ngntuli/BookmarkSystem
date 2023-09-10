@@ -1,5 +1,5 @@
-1000;user0@ngntuli.com;test;Brandon;M;m;user
-1001;user1@ngntuli.com;test;Lucky;M;m;user
-1002;user2@ngntuli.com;test;Given;M;m;editor
-1003;user3@ngntuli.com;test;Charlotte;M;f;editor
-1004;user4@ngntuli.com;test;Nkosinathi;M;m;chiefeditor    	
+1000;user0@ngntuli.com;test;Brandon;M;m;USER
+1001;user1@ngntuli.com;test;Lucky;M;m;USER
+1002;user2@ngntuli.com;test;Given;M;m;EDITOR
+1003;user3@ngntuli.com;test;Charlotte;M;f;EDITOR
+1004;user4@ngntuli.com;test;Nkosinathi;M;m;CHIEF_EDITOR    	
